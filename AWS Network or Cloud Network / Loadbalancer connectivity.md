@@ -1,4 +1,4 @@
-I have a real-time prod question, if a service A pod needs to talk to another service pod which is exposed by ALB, now we use alb dns to connect but why we need to define port as well? Is it mandatory?
+**I have a real-time prod question, if a service A pod needs to talk to another service pod which is exposed by ALB, now we use alb dns to connect but why we need to define port as well? Is it mandatory?**
 
 **Short answer**: it's mandatory only if the ALB listener isn't on the default port for the scheme you're using.
 
