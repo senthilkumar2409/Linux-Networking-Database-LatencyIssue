@@ -1,4 +1,6 @@
-Short answer: it's mandatory only if the ALB listener isn't on the default port for the scheme you're using.
+I have a real-time prod question, if a service A pod needs to talk to another service pod which is exposed by ALB, now we use alb dns to connect but why we need to define port as well? Is it mandatory?
+
+**Short answer**: it's mandatory only if the ALB listener isn't on the default port for the scheme you're using.
 
 **Why:** DNS resolves a hostname to an IP address only — it carries no port information. When you connect with just a hostname (e.g., `https://my-alb-1234.us-east-1.elb.amazonaws.com`), the client implicitly uses the default port for that scheme:
 - `http://` → port 80
